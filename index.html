@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" >
+   
+    <title>Titulo del documento</title>
+
+</head>
+
+<body>
+  <main>
+    
+    <!-- etiqueta span permite referenciar un texto y asignarle atributos-->
+    <h1><span style="color: white"</style><center>Titulo de la página</center></span></h1>
+
+   <text align="right" >
+    <h2>Subtitulo principal</h2></text>
+    
+    <p>Acá vamos a poner una imagen.  El link lleva a toyota</p>
+
+    <a href="http://toyota.com.ar" target="blank" rel="noopener noreferrer">
+      <img src="https://bit.ly/fcc-relaxing-cat" alt="Imagen del gato"></a>
+
+    <br />
+    <hr>  
+
+<!--  PUBLICACION DE UNA IMAGEN ------------------------>
+    <p>Publicación de una imagen</p>
+      <img src="images/auto2.jpg" width= 200px alt="auto cochera" target="blank">
+
+<!--  PUBLICACION DE TEXTO LINKEADO   ------------------>
+    <hr>
+    <p>Publicación de un texto linkeado</p>
+      <a href="#parrafo1">Salto al parrafo 1 más abajo</a>
+
+<!--  PUBLICACION DE UNA IMAGEN LINKEADA -------------->
+
+    <hr>
+    <p>Publicación de una imagen linkeada</p>
+    <a href="https://consejo.org.ar" alt="consejo" target="_blank" rel="noopener" rel="noreferrer">
+        <img src="images/auto1.jpg" alt="tablero" width="250px"*/></a>
+    <hr>
+
+
+    <h4 id="parrafo1">Parrafo 1</h4>
+
+<!--  ENLACES INTERNOS CON # ----------------------->
+    <p>Elegir la opción:</p>
+    <a href="#radiobuttom">Ver Radio Buttom</a> <br>
+    <a href="#checkbox">Ver Checkbox</a>
+
+
+<!--  LISTA ORDENADA ---------------------------------------------------------------->
+ <!--  Con   CTRL-Espacio   aparece el menu de opciones contextual-->
+
+    <p>Ejemplo de lista ordenada</p>
+    <div id="lista-orden">
+      <ol>
+        <li value="100">primero</li>
+        <li>segundo</li>
+        <li>tercero</li>
+            <ol>
+              <li style="list-style-type: lower-alpha"> otro menor 1</li>
+              <li style="list-style-type: lower-roman"> otro menor 2</li>
+              <li style="list-style-type: lower-roman"> otro menor 3</li>
+            </ol>
+      </ol>
+    </div>
+
+<!--  LISTA DESORDENADA-------------------------------->
+    <p>Ejemplo de lista DESordenada</p>
+    <div id="lista desordenada">
+      <ul>
+        <li>uno</li>
+        <li>dos</li>
+        <li>tres</li>
+      </ul>
+    </div>
+
+
+<!--  RADIO BUTTON CON VARIAS OPCIONES------------------>    
+  <p id="radiobuttom"></p>
+  <p>Ejemplo de radio button.
+    La etiqueta label permite que se marque la opción señalando sobre el texto.</p>
+    <div id="radio-button" class="botones">
+      <label for="uno"><input id="uno" type="radio"> Uno</label><br>
+      <label for="dos"><input id="dos" type="radio"> El Dos</label><br>
+      <input type="radio"> El tres<br>
+    </div>
+
+
+<!--  RADIO BUTTON CON UNA SOLA OPCION----------------->
+    <h4>Radio Buttom</h4>
+    <p>Ejemplo de radio button con una sola opción.
+      Hay que ponerle el atributo name a todos los elementos</p>
+    <div id="radio-button 2" class="botones">
+        <label for="unosolo"><input id="unosolo" type="radio" name="solo-uno"> Uno solo</label><br>
+        <label for="dossolo"><input id="dossolo" type="radio" name="solo-uno"> El Dos solo</label><br>
+    </div>
+
+<!-- CHECKBOX------------------------------------------>
+    <p id="checkbox"></p>
+    <h4>Checkbox</h4>
+    <p>Ejemplo de checkbox.  Siempre se pueden seleccionar varios.  Para uno solo, hay que elegir radio button.  Con atributo "checked" aparece una opción ya marcada.  con atributo "value" se indica que valor se manda al servidor</p>
+    <div id="checklist">
+      <label for="chk1"><input id="chk1" type="checkbox" checked value="alfa">alfa</label><br>
+      <label for="chk2"><input id="chk2" type="checkbox" value="beta">beta</label><br>
+    </div>
+
+
+    <!-- TABLAS (matrices) #region -->
+
+      <table>
+        <colgroup>
+          <col style="background-color: rgb(207, 207, 203)";>
+          <col style="background-color: rgb(248, 248, 26)";>
+          <col style="background-color: rgb(208, 72, 4)";>>
+        </colgroup>
+
+        <!-- <tbody>
+          <td style="background-color: rgb(9, 9, 9)";>
+          <td style="background-color: rgb(48, 25, 221)";>
+          <td style="background-color: rgb(14, 208, 4)";>
+        </tbody>         -->
+      
+        <thead>
+          <tr>
+            <th>Producto</th>
+            <th>Cantidad</th>
+            <th>Precio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td style="background-color:rgba(180, 119, 7, 0.445)">
+            Polenta</td>
+            <td>350</td>
+            <td>100$</td>
+          </tr>
+
+          <tr>
+            <td>Aceite</td>
+            <td>1350</td>
+            <td>500$</td>
+          </tr>
+        </tbody>
+
+        <tfoot>
+          <tr>
+            <td></td>
+            <td></td>
+            <td>600$</td> 
+          </tr>        
+        </tfoot>
+
+      </table>   
+
+<!-- MODELO DE FORMULARIO-------------------------------->
+    <P>Ejemplo de formulario</P>
+    <form action="/url-del-programa-que-procesa"  method="get">
+
+      <!-- con method=get, el navegador pasa esto:
+      file:///C:/url-del-programa-que-procesa?texto=va+el+nombre&archivo=BOLILLA+2023.xlsx&email=rgarcia%40consejocaba.org.ar&clave=Flam822&comentario=comentario+chico&comentafix=comentario+grande-->
+
+      <!-- con method=POST, el nvegador pasa esto:
+      file:///C:/url-del-programa-que-procesa
+      y nada más-->
+
+      <label for="readonlye">Read only</label>
+      <input id="readonly" type="text" placeholder="Inmodificable - read only"  readonly></br>
+
+      <label for="disabled">Disabled</label>
+      <input id="disabled" type="text" placeholder="Inmodificable - disabled"  disabled></br>
+
+      <label for="minch">Minima cantidad de caracteres (5 en este ejemplo)</label>
+      <input id="minch" type="text" placeholder="Escribi minimo 5 char" minlength="5"></br>
+
+      <label for="maxch">Maxima cantidad de caracteres (8 en este ejemplo)</label>
+      <input id="maxch" type="text" placeholder="Escribi maximo 8 char" maxlength="8"></br>
+      <hr>
+
+      <label for="date">Pide una fecha - Poniendo maximo y minimo bloquea calendario</label>
+      <input id="date" type="date" max="2023-10-31"  min="2022-12-01"></br>
+
+      <label for="nume">Pide un numero - puede maxi y min (ej 5 - 10)</label>
+      <input id="nume" type="number"  min="5"  max="10"></br>
+
+
+      <hr>
+
+      <p>Opcion de checkbox.   EL nombre antes y despues del campo de selección</p>
+
+      <label for="chk11">alfa11</label>
+      <input id="chk11" type="checkbox" checked name="chk1" value="alfa11"><br>
+
+      <label for="chk21"></label>
+      <input id="chk21" type="checkbox" name="chk2" value="beta11">beta11<br> 
+
+      <hr>
+
+      <label for="texto">Ingresa texto:   </label> 
+      <input type="text" id="texto" name="texto" placeholder="Ponele el nombre" required><br>
+      <br>
+      <label for="textopat">Texto con pattern: </label> 
+      <input type="text" id="textopat" name="textopat" placeholder="Ponele el nombre" required
+      pattern="[A-Z]{3}"><small>Debe ingresar 3 mayusculas</small>
+      
+      
+      <br> <br>
+
+      <label for="archivo">Elegi archivo -puede ser multiple- </label>  
+      <input type="file" placeholder="Elegi archivo" id="archivo" name="archivo" required multiple><br>
+      <br>
+      <label for="email">Ingresa email</label>  
+      <input type="email" name="email" id="email" placeholder="Pone mail" id="email"
+      required></label>
+      
+      <br> <br>
+
+      <label for="clave">Ingresa clave</label>  
+      <input type="password" placeholder="Clave" required  id="clave"  name="clave"> <br>
+
+      <br>
+
+      <label for="comentario">Comentarios:</label> 
+      <textarea id="comentario" 
+       placeholder="Comentá ..." id="comentario"  name="comentario"></textarea> <br>
+
+       <br>
+
+      <label for="comentafix">Comentarios fijos:</label> 
+      <textarea id="comentafix" rows="5"  cols="20"
+       placeholder="Comentá mas..." id="comentafix"  name="comentafix">Este es texto por defecto</textarea> <br>
+
+
+
+         <!-- selector de opciones -->
+    <p id="opciones"></p>
+    <h4>Selección de opciones</h4>
+    <p>Se elije una del combo</p>
+    <label for="opciones">Elegi país de origen</label>
+    <select name="valopciones" id="opciones">
+
+      <optgroup label="Grupo 1">
+        <option value="Argentina" selected="selected">Argentina</option>
+        <option value="Francia">Francia</option>
+        <option value="Italia">Italia</option>
+      </optgroup>
+
+
+      <optgroup label="Grupo 2">
+        <option value="Peru">Peru</option>
+        <option value="China">China</option>
+        <option value="Bolivia">Bolivia</option>
+      </optgroup>
+    </select>  
+
+    <br><br>
+
+    <button onclick="alert('Fijate bien lo que haces')">Dale click acá</button>
+    <br><br>
+
+       <button type="button">Tipo button</button>
+      <!-- en tipo button se indica qué hace en el javascript-->
+
+       <button type="reset">Reset</button>
+       <button type="submit"  onclick="alert('Manda los datos')">Procesar Submit</button>
+
+
+    </form>
+<!-- Tipos de input: 
+      input type= "text"
+      input type= "radio"
+      input type= "checkbox"
+      input type= "file"
+      input type= "submit"  (muestra un botón)
+      input type= "email"
+      input type= "password   (oculta valor)"-->
+
+    <!--  placeholder= texto que se vera
+          required= lo hace obligatorio
+          checked= lo muestra preseleccionado-->
+    <hr>
+
+    <div id="contenedor-principal">
+      <div class="rectangulo px">200 px de ancho</div>
+      <div class="rectangulo vw">200vw de Ancho</div>
+      <div class="rectangulo em">15 em de ancho</div>      
+    </div>
+
+<!---  Modelo de pinguino-->
+  <div class="elpinguino">
+    <div class="cabeza">cabeza</div>
+    <div class="panza"></div>
+    <div class="pies"></div>
+  </div>
+
+  <!-- comentarios -->
+    
+  </main>
+
+  <footer>
+    <hr>
+    <p><small>Sin derechos de autor: <a href="consejo.org.ar" target="_parent" rel=noreferrer rel=noopener>Consejo Profesional</small></a></p>
+  </footer>
+</body>
+
+</html>
